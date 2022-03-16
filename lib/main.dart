@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,48 +15,53 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.redAccent,
         body: SafeArea(
-          child: Row(
-            // mainAxisSize: MainAxisSize.min,
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            // crossAxisAlignment: CrossAxisAlignment.stretch ,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const <Widget>[
+                CircleAvatar(
+                  radius: 100.0,
+                  backgroundImage: AssetImage('images/picture.png'),
+                ),
+                Text(
+                  'Muhammad Ali Sojib',
+                  style: TextStyle(
+                      fontFamily: 'Pacifico',
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.0,
+                      color: Colors.white),
+                ),
+                Text(
+                  'FLUTTER DEVELOPER',
+                  style: TextStyle(
+                      fontSize: 10.0,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 2.0),
+                ),
+                Card(
+                  color: Colors.white,
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.lightBlueAccent,
+                    ),
+                    title: Text(
+                      '+8801777506247',
+                      style: TextStyle(
+                          color: Colors.lightBlueAccent,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.0,
+                          fontSize: 20.0),
+                    ),
+                  ),
+                )
 
-
-            children: <Widget>[
-
-              Container(
-                // height: 100.0,
-                // width: 100.0,
-                // margin: EdgeInsets.only(left: 30.0),
-                padding: EdgeInsets.all(20),
-                color: Colors.white,
-                child: Text('data'),
-              ),
-              SizedBox(height: 10,),
-
-              Container(
-                // height: 100.0,
-                // width: 100.0,
-                // margin: EdgeInsets.only(left: 30.0),
-                padding: EdgeInsets.all(20),
-                color: Colors.orange,
-                child: Text('data2'),
-              ),
-              SizedBox(height: 10,),
-              Container(
-                // height: 100.0,
-                // width: 100.0,
-                // margin: EdgeInsets.only(left: 30.0),
-                padding: EdgeInsets.all(20),
-                color: Colors.brown,
-                child: Text('data3'),
-              ),
-              // Container(
-              //   width: double.infinity,
-              //   height: 100.0,
-              // )
-            ],
-
-
+              ],
+            ),
           ),
         ),
       ),
