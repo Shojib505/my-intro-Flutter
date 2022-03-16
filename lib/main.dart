@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    WidgetsApp.debugAllowBannerOverride=false;
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.redAccent,
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
                   'Muhammad Ali Sojib',
                   style: TextStyle(
                       fontFamily: 'Pacifico',
-                      fontSize: 30.0,
+                      fontSize: 35.0,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 1.0,
                       color: Colors.white),
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
                 Text(
                   'FLUTTER DEVELOPER',
                   style: TextStyle(
-                      fontSize: 10.0,
+                      fontSize: 18.0,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 2.0),
@@ -58,8 +59,28 @@ class MyApp extends StatelessWidget {
                           fontSize: 20.0),
                     ),
                   ),
-                )
-
+                ),
+                Card(
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 25.0
+                  ),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.lightBlueAccent,
+                    ),
+                    title: Text(
+                      'Ali.sojib@outlook.com',
+                        style: TextStyle(
+                        color: Colors.lightBlueAccent,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.0,
+                        fontSize: 20.0),
+                    ),
+                  ) ,
+                ),
               ],
             ),
           ),
